@@ -48,7 +48,7 @@
     animation: popIn 1s ease-out forwards;
     animation-delay: 1s;
 
-    @include tab{
+    @include tab {
       top: 46%;
     }
   }
@@ -116,7 +116,7 @@
 
     @include tab {
       flex-direction: column;
-      gap: 40px;
+      gap: 60px;
       align-items: center;
     }
   }
@@ -143,6 +143,11 @@
   &__section-ttl {
     max-width: 200px;
     margin: 0 0 24px;
+
+    @include tab{
+    max-width: 180px;
+    margin: 0 auto 24px;
+    }
   }
 
   &__table {
@@ -166,12 +171,18 @@
 
   }
 
-  &__bnr-ttl {}
+  &__bnr-ttl {
+    margin: 0 0 6px;
+  }
 
   &__bnr {
     max-width: 340px;
     display: block;
     margin: 0 0 16px;
+
+    @include tab{
+    padding: 0 50px 0 0;
+    }
 
     &:after {
       content: "";
@@ -181,7 +192,7 @@
       padding: 0 0 16px;
 
       @include pc {
-        width: 100%;
+        width: calc(100% + 50px);
       }
 
     }
@@ -234,8 +245,9 @@
 
   &__content {
 
-    @include tab{
-      overflow: auto; /* ポップアップの内容がmax-heightを超えた場合にスクロールバーを表示 */
+    @include tab {
+      overflow: auto;
+      /* ポップアップの内容がmax-heightを超えた場合にスクロールバーを表示 */
     }
 
   }
@@ -291,18 +303,18 @@
       text-align: left;
       background-color: #fff;
       vertical-align: middle;
+      text-align: center;
 
-      @include tab{
-      padding: 4px;
+      @include tab {
+        padding: 4px;
       }
     }
 
     th {
       font-weight: normal;
-      text-align: center;
 
-      @include tab{
-      width: 100px;
+      @include tab {
+        width: 100px;
       }
     }
   }
