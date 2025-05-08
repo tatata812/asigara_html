@@ -103,46 +103,21 @@ $(function () {
 
 
 
-  // アバウトスライダー
+// 会社概要ポップアップ
+$("#company-popup").click(function() {
+  $("#popup-container").fadeIn(); // フェードインで表示
+});
 
-  $(function () {
-    const $slider = $('.about-slider-js');
-  
-    // 初期化
-    $slider.slick({
-      centerMode: true,
-      centerPadding: '25%',
-      slidesToShow: 1,
-      infinite: true,
-      speed: 7000, // 流れる速さ（急停止するので適度に速く）
-      autoplay: true,
-      autoplaySpeed: 0, // 自動再生の間隔なし
-      arrows: false,
-      dots: false,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-      cssEase: 'linear', // 一定速度で流す
-    });
-  
-    // 初回スタート
-    let isPaused = false;
-  
-    // スライド移動後イベント
-    $slider.on('afterChange', function () {
-      if (!isPaused) {
-        isPaused = true;
-        $slider.slick('slickPause'); // ピタッと停止
-        setTimeout(function () {
-          $slider.slick('slickPlay'); // 再開
-          isPaused = false;
-        }, 3000); // 3秒停止
-      }
-    });
-  });
+$("#close-popup").click(function() {
+  $("#popup-container").fadeOut(); // フェードアウトで非表示
+});
 
-
-
-
+// ポップアップの外側をクリックしても閉じるようにする場合 (任意)
+$("#popup-container").click(function(event) {
+  if (event.target === this) {
+    $(this).fadeOut();
+  }
+});
 
 })
 

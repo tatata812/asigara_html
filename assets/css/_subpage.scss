@@ -16,194 +16,496 @@
   }
 }
 
-
 /* =================================
-おしながき
+会社概要
  ================================= */
 
-.page-menu {
+.page-company {
 
-  &__item-wrap {
-    padding: 120px 12px;
-    max-width: 1180px;
-    margin: 0 auto;
+  &__main-visual {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/subpage/company-mv.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden; // チラ見え防止
+  }
 
-    @include tab {
-      padding: 24px 0px;
+  &__main-visual-img01 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    max-width: 680px;
+    z-index: 2;
+
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center center;
+    opacity: 0;
+    visibility: hidden;
+
+    animation: popIn 1s ease-out forwards;
+    animation-delay: 1s;
+  }
+
+  @keyframes popIn {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    50% {
+      visibility: visible;
+    }
+
+    80% {
+      transform: translate(-50%, -50%) scale(1.1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      visibility: visible;
+      /* ←ここを必ず追加 */
     }
   }
 
-  &__item {
+  &__main-visual-text {
+    position: absolute;
+    bottom: 12px;
+    left: 80px;
+    max-width: 400px;
+
+    @include tab {
+      max-width: 260px;
+      left: 16px;
+
+    }
+
+  }
+
+  &__section {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 80px 16px;
+
+    @include tab {
+      padding: 40px 16px 60px;
+    }
+  }
+
+  &__top-text {
+    margin: 0 0 60px;
+
+    @include tab {
+      margin: 0 0 32px;
+    }
+  }
+
+  &__flex {
     display: flex;
-    margin: 0 0 100px;
 
     @include tab {
       flex-direction: column;
-      margin: 0 0 32px;
+      gap: 40px;
+      align-items: center;
     }
   }
 
-  &__text-wrap {
-    width: 50%;
-    padding: 0 0 0 100px;
-
-    @include pc {
-      padding: 0 0 0 40px;
-    }
-
-    @include tab {
-      width: 100%;
-      order: 1;
-      padding: 0 0 0 24px;
-    }
-  }
-
-  &__item-ttl {
-    font-size: 28px;
-    margin: 0 0 40px;
-
-    @include tab{
-      margin: 0 0 24px;
-      font-size: 24px;
-    }
-  }
-
-  &__item-ttl-lead {
-    margin: -36px 0 40px;
-
-    @include tab{
-      margin: -24px 0 40px;
-    }
-  }
-
-  &__menu-name {
-    font-size: 20px;
-    margin: 0 0 6px;
-  }
-
-  &__menu-price {
-    margin: 0 0 40px;
-
-    &--no-margin {
-      margin: 0;
-    }
-
-    @include tab{
-      margin: 0 0 24px;
-    }
-  }
-
-  &__img {
+  &__left {
     width: 50%;
 
     @include tab {
       width: 100%;
-      margin: 0 0 32px;
+      max-width: 500px;
     }
   }
-}
 
-/* =================================
-アクセス
- ================================= */
+  &__right {
+    width: 50%;
 
-.page-access {
-
-  &__section {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 0 12px 80px;
-  }
-
-  &__map-wrap {
-    width: 100%;
-    margin: 0 auto 80px;
-
-    @include tab{
-      margin: 0 auto 40px;
-    }
-  }
-  
-   .map {
+    @include tab {
       width: 100%;
-      height: 0;
-      position: relative;
-      padding-top: 56.25%;
-      overflow: hidden;
-  
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-  }
-
-  &__text-wrap {
-    border-bottom: 1px solid #fff;
-    padding: 32px 0 16px;
-
-    &--border-none {
-      border-bottom: none;
+      max-width: 500px;
     }
+
   }
 
-  &__text {
-    margin: 0 0 16px;
-
-    &--bold {
-      font-weight: bold;
-    }
-  }
-}
-
-/* =================================
-アバウト
- ================================= */
-
-.page-about {
-
-  &__slider {
-    overflow: hidden;
-    margin: 60px 0 80px;
-  }
-
-  &__section {
-    padding: 0 12px 80px;
-  }
-
-  &__sp-img {
-    margin: 0 0 40px;
-  }
-
-  &__table-wrap {
-    max-width: 820px;
-    margin: 0 auto;
+  &__section-ttl {
+    max-width: 200px;
+    margin: 0 0 24px;
   }
 
   &__table {
-    width: 100%;
+    text-align: left;
 
-    tr {
-      border-top: 1px solid #fff;
+    th,
+    td {
+      padding: 4px 0;
+      vertical-align: top;
+      text-align: left;
+    }
 
-      &:last-child {
-        border-bottom: 1px solid #fff;
+    th {
+      white-space: nowrap;
+      width: 120px;
+
+      @include tab {
+        width: 100px;
+      }
+    }
+
+  }
+
+  &__bnr-ttl {}
+
+  &__bnr {
+    max-width: 340px;
+    display: block;
+    margin: 0 0 16px;
+
+    &:after {
+      content: "";
+      border-bottom: 1px solid #a0ebff;
+      width: 120%;
+      display: block;
+      padding: 0 0 16px;
+
+      @include pc {
+        width: 100%;
+      }
+
+    }
+  }
+
+  &__right-flex {
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+  }
+
+  &__bnr03 {
+    width: 180px;
+    cursor: pointer;
+  }
+
+  &__bnr04 {
+    display: block;
+    width: 80px;
+  }
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+ポップアップ
+ ================================= */
+
+
+.popup-style {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  /* Flexbox レイアウトを有効にする */
+  justify-content: center;
+  /* 水平方向中央揃え */
+  align-items: center;
+  /* 垂直方向中央揃え */
+  overflow: auto;
+
+  &__content {
+
+    @include tab{
+      overflow: auto; /* ポップアップの内容がmax-heightを超えた場合にスクロールバーを表示 */
+    }
+
+  }
+
+  &__ttl {
+    background-color: #008cff;
+    color: #fff;
+    font-size: 24px;
+    padding: 8px 0;
+    position: relative;
+  }
+
+  &__btn {
+    position: absolute;
+    color: #fff;
+    right: 12px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+
+.popup-company {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 780px;
+  max-height: 770px;
+  width: 100%;
+  background-color: #cff2ff;
+
+
+
+  &__lead {
+    font-size: 24px;
+    color: #0097e0;
+    padding: 12px;
+
+  }
+
+  &__table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    margin: 0 auto 40px;
+
+
+    th,
+    td {
+      padding: 8px;
+      border: 1px solid #1c1c1c;
+      text-align: left;
+      background-color: #fff;
+      vertical-align: middle;
+
+      @include tab{
+      padding: 4px;
       }
     }
 
     th {
-      text-align: left;
-      padding: 16px 2px;
-      font-weight: 100;
-    }
+      font-weight: normal;
+      text-align: center;
 
-    td {
-      text-align: left;
-      padding: 16px 2px;
+      @include tab{
+      width: 100px;
+      }
     }
   }
+
+
 }
 
 
+.popup-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.popup-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.popup-content th,
+.popup-content td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.popup-content th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.popup-content button#close-popup {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup-content button#close-popup:hover {
+  background-color: #0056b3;
+}
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
+/* =================================
+
+ ================================= */
+
+.aaa {
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
