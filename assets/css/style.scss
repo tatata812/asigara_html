@@ -275,6 +275,10 @@ header
     width: 90%;
     transition: opacity 1s ease;
     opacity: 0;
+
+    @include tab{
+      top: 40%;
+    }
   }
 
   &__img01 {
@@ -324,6 +328,13 @@ header
     opacity: 0;
     z-index: 1;
     animation: fadeInImg 4s 3s forwards; // 3秒後に1秒かけてフェードイン
+
+    @include tab{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
   }
 
   &__text01,
@@ -338,7 +349,7 @@ header
     font-weight: bold;
 
     @include tab{
-    top: 75%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 12px;
@@ -356,9 +367,6 @@ header
     z-index: 1;
     animation: fadeInImg 3s 3s forwards; // 3秒後に1秒かけてフェードイン
 
-    @include tab{
-      top: 70%;
-    }
   }
 
   &__ {}
