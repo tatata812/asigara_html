@@ -132,9 +132,44 @@ td {
       right: 12px;
     }
   }
-
-
 }
+
+// ふわっと表示
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .ttl-style {
   text-align: center;

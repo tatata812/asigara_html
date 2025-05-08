@@ -323,43 +323,6 @@
 }
 
 
-.popup-content h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.popup-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 15px;
-}
-
-.popup-content th,
-.popup-content td {
-  padding: 8px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-.popup-content th {
-  background-color: #f0f0f0;
-  font-weight: bold;
-}
-
-.popup-content button#close-popup {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.popup-content button#close-popup:hover {
-  background-color: #0056b3;
-}
-
 .aaa {
 
   &__ {}
@@ -400,12 +363,49 @@
 }
 
 /* =================================
-
+業務紹介
  ================================= */
 
-.aaa {
+.page-services {
 
-  &__ {}
+  &__main-visual {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/subpage/services-mv.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden; // チラ見え防止
+
+    @include sp{
+      background-position: calc(50% - 50px) center;    }
+  }
+
+  &__main-visual-img01 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 90%;
+    max-width: 680px;
+    z-index: 2;
+    transform: translate(-50%, -50%) ;
+
+    @include pc{
+      max-width: 480px;
+    }
+
+
+    @include tab {
+      max-width:300px;
+      left: 35%;
+    }
+
+    @include sp{
+    width: 190px;
+    left: 32%;
+
+    }
+  }
 
   &__ {}
 

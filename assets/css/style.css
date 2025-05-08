@@ -112,6 +112,16 @@ td {
   right: 12px;
 }
 
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+  }
+}
 .ttl-style {
   text-align: center;
   font-size: 36px;
@@ -612,46 +622,49 @@ td {
   }
 }
 
-.popup-content h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.popup-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 15px;
-}
-
-.popup-content th,
-.popup-content td {
-  padding: 8px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-.popup-content th {
-  background-color: #f0f0f0;
-  font-weight: bold;
-}
-
-.popup-content button#close-popup {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.popup-content button#close-popup:hover {
-  background-color: #0056b3;
-}
-
 /* =================================
-
+業務紹介
  ================================= */
+.page-services__main-visual {
+  position: relative;
+  height: 100vh;
+  background-image: url("../img/subpage/services-mv.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .page-services__main-visual {
+    background-position: calc(50% - 50px) center;
+  }
+}
+.page-services__main-visual-img01 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 90%;
+  max-width: 680px;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1120px) {
+  .page-services__main-visual-img01 {
+    max-width: 480px;
+  }
+}
+@media (max-width: 820px) {
+  .page-services__main-visual-img01 {
+    max-width: 300px;
+    left: 35%;
+  }
+}
+@media (max-width: 600px) {
+  .page-services__main-visual-img01 {
+    width: 190px;
+    left: 32%;
+  }
+}
 /* =================================
 
  ================================= */
@@ -792,7 +805,7 @@ header
   top: -4px;
   right: 0;
   padding: 80px 40px 0;
-  background: #000000;
+  background-color: rgba(60, 60, 60, 0.9);
   height: 100vh;
   width: 100%;
 }
