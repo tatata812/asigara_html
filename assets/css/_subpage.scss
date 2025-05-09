@@ -243,6 +243,8 @@
   /* 垂直方向中央揃え */
   overflow: auto;
 
+
+
   &__content {
 
     @include tab {
@@ -338,6 +340,8 @@
   width: 100%;
   background-color: #cff2ff;
 
+  
+
 
   &__img {
     max-width: 680px;
@@ -359,13 +363,19 @@
 .popup-recruit {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   max-width: 780px;
-  max-height: 770px;
   width: 100%;
   background-color: #cff2ff;
 
+  @include tab{
+  height: 100%;
+  }
+
+  
+
+
+
   &--pink {
     background-color: #fac9d6;
-
   }
 
 

@@ -660,9 +660,13 @@ td {
 .popup-recruit {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   max-width: 780px;
-  max-height: 770px;
   width: 100%;
   background-color: #cff2ff;
+}
+@media (max-width: 820px) {
+  .popup-recruit {
+    height: 100%;
+  }
 }
 .popup-recruit--pink {
   background-color: #fac9d6;
