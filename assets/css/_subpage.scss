@@ -624,7 +624,7 @@
     animation: popIn 1s ease-out forwards;
     animation-delay: 1s;
 
-    @include pc{
+    @include pc {
       max-width: 600px;
     }
 
@@ -632,9 +632,9 @@
       top: 46%;
     }
 
-    @include sp{
-    top: 100px;
-    max-width: 300px;
+    @include sp {
+      top: 100px;
+      max-width: 300px;
 
     }
   }
@@ -674,17 +674,17 @@
     align-items: center;
     gap: 40px;
 
-    @include pc{
+    @include pc {
       max-width: 600px;
     }
 
     @include tab {
-flex-wrap: wrap;
-max-width: 300px;
+      flex-wrap: wrap;
+      max-width: 300px;
 
     }
 
-    @include sp{
+    @include sp {
       top: 70%;
     }
   }
@@ -692,16 +692,16 @@ max-width: 300px;
 
   &__main-visual-item {
 
-    @include tab{
-    width: calc((100% - 40px) / 2);
+    @include tab {
+      width: calc((100% - 40px) / 2);
     }
   }
 
   &__main-visual-ttl {
 
-    @include tab{
-    order: -1;
-    width: 100%;
+    @include tab {
+      order: -1;
+      width: 100%;
     }
   }
 
@@ -714,8 +714,151 @@ max-width: 300px;
     padding: 80px 16px;
 
     @include tab {
-      padding: 40px 16px 60px;
+      padding: 40px 16px 40px;
     }
+  }
+
+  &__lead-flex {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0 0 40px;
+
+    @include tab{
+      flex-direction: column;
+      margin: 0 0 24px;
+
+      }
+  }
+
+  &__lead-left {
+
+    @include tab{
+     max-width: 280px;
+      }
+  }
+
+  &__lead-right {}
+
+  &__content-flex {
+    display: flex;
+    gap: 40px;
+    margin: 0 0 40px;
+
+    &--reverse {
+      flex-direction: row-reverse;
+      
+    }
+    
+    @include tab{
+      gap: 12px;
+    flex-direction: column;
+    }
+  }
+
+  &__content-left {
+    width: 400px;
+
+    @include tab{
+      width: 100%;
+       }
+  }
+
+  &__text {}
+
+  &__lead {
+    background-color: #0097e0;
+    color: #fff;
+    padding: 0 6px;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin: 6px 0;
+
+
+
+    @include tab{
+    font-size: 22px;
+    }
+
+    &--pink {
+      background-color: #f099bf;
+      font-size: 26px;
+
+      @include tab{
+        font-size: 20px;
+        }
+    }
+
+  }
+
+  &__content-right {
+    flex: 1;
+  }
+
+  &__popup-wrap {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+
+  }
+
+  &__popup {
+    font-weight: bold;
+
+    width: calc((100%) / 3);
+
+    img {
+      width: 32px;
+      display: inline-block;
+      margin: 0 0 0 8px;
+      cursor: pointer;
+      vertical-align: middle;
+
+    }
+  }
+
+  &__faq {
+    margin: -140px 0 40px 0;
+    cursor: pointer;
+
+    @include pc{
+      margin: -36px 0 40px 0;
+    }
+
+    @include tab{
+      margin: -70px 0 40px 0;
+    }
+  }
+
+  &__bottom-text {
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 80px;
+
+    @include sp{
+      font-size: 15px;
+    }
+
+    img {
+      width: 32px;
+      display: inline-block;
+      margin: 0 4px 0 ;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+
+    a{
+      font-size: 20px;
+      @include sp{
+        font-size: 15px;
+      }
+      }
+
+      span {
+        color: #008cff;
+      }
   }
 }
 
