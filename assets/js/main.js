@@ -41,10 +41,12 @@ $(function () {
     }
   });
 
-// トップまで戻る
-  $('.footer__top-btn').on('click', function(e) {
+  // トップまで戻る
+  $('.footer__top-btn').on('click', function (e) {
     e.preventDefault(); // リンクのデフォルト動作を無効化（必要に応じて）
-    $('html, body').animate({ scrollTop: 0 }, 500); // 500ミリ秒かけてトップへスクロール
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500); // 500ミリ秒かけてトップへスクロール
   });
 
 
@@ -73,18 +75,21 @@ $(function () {
   });
 
 
-  $(window).scroll(function () {
-    // 要素の位置を取得
-    var targetTop = $(".follow-btn-js").offset().top;
-    // 要素の上端が画面上端から 200px 以上離れているかどうかを確認
-    if (targetTop >= 800) {
-      // 要素にクラスを付与
-      $(".follow-btn-js").addClass("active");
-    } else {
-      // 要素からクラスを削除
-      $(".follow-btn-js").removeClass("active");
-    }
+  // 業務内容スクロールで表示
+  $(window).on('scroll', function() {
+    $('.services-item-js').each(function() {
+      const elemTop = $(this).offset().top;
+      const scroll = $(window).scrollTop();
+      const windowHeight = $(window).height();
+
+      if (scroll > elemTop - windowHeight + 100) {
+        $(this).addClass('show');
+      }
+    });
   });
+
+  // 初回読み込み時にも実行
+  $(window).trigger('scroll');
 
 
   $(function () {
@@ -103,21 +108,36 @@ $(function () {
 
 
 
-// 会社概要ポップアップ
-$("#company-popup").click(function() {
-  $("#popup-container").fadeIn(); // フェードインで表示
-});
+  // 会社概要ポップアップ
+  $("#company-popup").click(function () {
+    $("#popup-container").fadeIn(); // フェードインで表示
+  });
 
-$("#close-popup").click(function() {
-  $("#popup-container").fadeOut(); // フェードアウトで非表示
-});
+  $("#close-popup").click(function () {
+    $("#popup-container").fadeOut(); // フェードアウトで非表示
+  });
 
-// ポップアップの外側をクリックしても閉じるようにする場合 (任意)
-$("#popup-container").click(function(event) {
-  if (event.target === this) {
-    $(this).fadeOut();
-  }
-});
+  // ポップアップの外側をクリックしても閉じるようにする場合 (任意)
+  $("#popup-container").click(function (event) {
+    if (event.target === this) {
+      $(this).fadeOut();
+    }
+  });
+
+  // 業務内容ポップアップ
+  $("#services-popup,#services-popup02").click(function () {
+    $("#popup-container").fadeIn(); // フェードインで表示
+  });
+
+  $("#close-popup").click(function () {
+    $("#popup-container").fadeOut(); // フェードアウトで非表示
+  });
+
+  // ポップアップの外側をクリックしても閉じるようにする場合 (任意)
+  $("#popup-container").click(function (event) {
+    if (event.target === this) {
+      $(this).fadeOut();
+    }
+  });
 
 })
-

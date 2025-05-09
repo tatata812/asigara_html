@@ -144,9 +144,9 @@
     max-width: 200px;
     margin: 0 0 24px;
 
-    @include tab{
-    max-width: 180px;
-    margin: 0 auto 24px;
+    @include tab {
+      max-width: 180px;
+      margin: 0 auto 24px;
     }
   }
 
@@ -180,8 +180,8 @@
     display: block;
     margin: 0 0 16px;
 
-    @include tab{
-    padding: 0 50px 0 0;
+    @include tab {
+      padding: 0 50px 0 0;
     }
 
     &:after {
@@ -323,6 +323,33 @@
 }
 
 
+.popup-services {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 780px;
+  max-height: 770px;
+  width: 100%;
+  background-color: #cff2ff;
+
+
+  &__img {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  &__text {
+    background-color: #fff;
+    padding: 4px 12px;
+    max-width: 680px;
+    margin: 0 auto 24px;
+  }
+
+
+}
+
+
 .aaa {
 
   &__ {}
@@ -377,8 +404,9 @@
     background-size: cover;
     overflow: hidden; // チラ見え防止
 
-    @include sp{
-      background-position: calc(50% - 50px) center;    }
+    @include sp {
+      background-image: url("../img/subpage/services-mv-sp.jpg");
+    }
   }
 
   &__main-visual-img01 {
@@ -388,44 +416,167 @@
     width: 90%;
     max-width: 680px;
     z-index: 2;
-    transform: translate(-50%, -50%) ;
+    transform: translate(-50%, -50%);
 
-    @include pc{
+    @include pc {
       max-width: 480px;
     }
 
 
     @include tab {
-      max-width:300px;
+      max-width: 300px;
       left: 35%;
     }
 
-    @include sp{
-    width: 190px;
-    left: 32%;
+    @include sp {
+      width: 300px;
+      top: 30%;
+      left: 50%;
 
     }
   }
 
-  &__ {}
+  &__section {
+    padding: 60px 16px 0;
 
-  &__ {}
+    @include tab{
+      padding: 40px 16px 0;
+    }
+  }
 
-  &__ {}
+  &__item {
+    max-width: 800px;
+    margin: 0 auto 88px;
+    display: flex;
+    gap: 40px;
 
-  &__ {}
+    @include pc{
+    gap: 0;
+    }
 
-  &__ {}
+    @include tab{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 4px;
+    margin: 0 auto 60px;
 
-  &__ {}
+    }
+  }
 
-  &__ {}
+  &__left {
+    flex: 1;
+    transform: scale(1.8);
 
-  &__ {}
+    @include pc{
+      transform: scale(1.2);
+    }
 
-  &__ {}
+    @include tab{
+      transform: scale(1);
+      max-width: 240px;
+    }
+  }
 
-  &__ {}
+  &__right {
+    width: 460px;
+
+    @include tab{
+    width: 100%;
+    max-width: 460px;
+    }
+  }
+
+  &__item-text {
+
+    span {
+      color: #008cff;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1.2;
+      display: block;
+
+      @include tab{
+        font-size: 20px;
+
+      }
+    }
+  }
+
+  &__text-wrap {
+    max-width: 800px;
+    margin: 0 auto 100px;
+
+    @include tab{
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__text {
+    text-align: right;
+    font-size: 20px;
+
+    @include tab{
+    text-align: center;
+    }
+  }
+
+  &__popup {
+    color: #008cff;
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 0 0 8px;
+    cursor: pointer;
+
+    @include tab{
+      font-size: 20px;
+    }
+
+    img {
+      width: 32px;
+      display: inline-block;
+      margin: 0 0 0 8px;
+      cursor: pointer;
+
+    }
+  }
+
+  &__bottom-img {
+    margin: -100px 0 0 0;
+    position: relative;
+    z-index: -1;
+
+    @include tab{
+    margin: 0;
+    }
+  }
+
+  &__bottom-text {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 90%;
+    max-width: 380px;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+
+    @include pc {
+      max-width: 280px;
+    }
+
+
+    @include tab {
+      max-width: 200px;
+      left: 25%;
+    }
+
+    @include sp {
+      width: 120px;
+      top: 30%;
+      left: 24%;
+
+    }
+  }
 
   &__ {}
 
