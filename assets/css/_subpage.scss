@@ -258,6 +258,8 @@
     font-size: 24px;
     padding: 8px 0;
     position: relative;
+    text-align: center;
+
   }
 
   &__btn {
@@ -346,6 +348,75 @@
     margin: 0 auto 24px;
   }
 
+  
+}
+
+
+.popup-recruit {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 780px;
+  max-height: 770px;
+  width: 100%;
+  background-color: #cff2ff;
+
+
+
+  &__lead {
+    font-size: 24px;
+    color: #0097e0;
+    max-width: 700px;
+    margin: 40px auto 0;
+    text-align: left;
+
+    
+
+  }
+
+  &__flex {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    display: flex;
+    text-align: left;
+
+  }
+
+  &__left {
+    width: 55%;
+  }
+
+  &__right {
+    width: 45%;
+
+  }
+
+  &__sub-ttl {
+margin: 0 0 6px;
+    &::before {
+      content: '●';
+      color: #00a2ff;
+      /*色を変える*/
+      margin: 0 6px 0 0;
+    }
+  }
+
+  &__list {
+
+
+    li {
+      margin: 0 0 6px 12px;
+
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
 
 }
 

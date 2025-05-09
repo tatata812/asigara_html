@@ -578,6 +578,7 @@ td {
   font-size: 24px;
   padding: 8px 0;
   position: relative;
+  text-align: center;
 }
 .popup-style__btn {
   position: absolute;
@@ -654,6 +655,44 @@ td {
   margin: 0 auto 24px;
 }
 
+.popup-recruit {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 780px;
+  max-height: 770px;
+  width: 100%;
+  background-color: #cff2ff;
+}
+.popup-recruit__lead {
+  font-size: 24px;
+  color: #0097e0;
+  max-width: 700px;
+  margin: 40px auto 0;
+  text-align: left;
+}
+.popup-recruit__flex {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  display: flex;
+  text-align: left;
+}
+.popup-recruit__left {
+  width: 55%;
+}
+.popup-recruit__right {
+  width: 45%;
+}
+.popup-recruit__sub-ttl {
+  margin: 0 0 6px;
+}
+.popup-recruit__sub-ttl::before {
+  content: "●";
+  color: #00a2ff;
+  /*色を変える*/
+  margin: 0 6px 0 0;
+}
+.popup-recruit__list li {
+  margin: 0 0 6px 12px;
+}
 /* =================================
 業務紹介
  ================================= */

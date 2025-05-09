@@ -140,4 +140,16 @@ $(function () {
     }
   });
 
+     // リクルートページポップアップ
+     for (let i = 1; i <= 4; i++) {
+      $(`.recruit-popup-btn0${i}`).on('click', function() {
+        $(`#popup-container0${i}`).fadeIn();
+      });
+    }
+
+    // 閉じる処理（共通）
+    $('.close-popup').on('click', function() {
+      $(this).closest('.popup-container').fadeOut();
+    });
+
 })
