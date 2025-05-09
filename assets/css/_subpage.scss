@@ -439,7 +439,7 @@
   &__section {
     padding: 60px 16px 0;
 
-    @include tab{
+    @include tab {
       padding: 40px 16px 0;
     }
   }
@@ -450,15 +450,15 @@
     display: flex;
     gap: 40px;
 
-    @include pc{
-    gap: 0;
+    @include pc {
+      gap: 0;
     }
 
-    @include tab{
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 4px;
-    margin: 0 auto 60px;
+    @include tab {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 4px;
+      margin: 0 auto 60px;
 
     }
   }
@@ -467,11 +467,11 @@
     flex: 1;
     transform: scale(1.8);
 
-    @include pc{
+    @include pc {
       transform: scale(1.2);
     }
 
-    @include tab{
+    @include tab {
       transform: scale(1);
       max-width: 240px;
     }
@@ -480,9 +480,9 @@
   &__right {
     width: 460px;
 
-    @include tab{
-    width: 100%;
-    max-width: 460px;
+    @include tab {
+      width: 100%;
+      max-width: 460px;
     }
   }
 
@@ -495,7 +495,7 @@
       line-height: 1.2;
       display: block;
 
-      @include tab{
+      @include tab {
         font-size: 20px;
 
       }
@@ -506,7 +506,7 @@
     max-width: 800px;
     margin: 0 auto 100px;
 
-    @include tab{
+    @include tab {
       margin: 0 auto 40px;
     }
   }
@@ -515,8 +515,8 @@
     text-align: right;
     font-size: 20px;
 
-    @include tab{
-    text-align: center;
+    @include tab {
+      text-align: center;
     }
   }
 
@@ -528,7 +528,7 @@
     margin: 0 0 0 8px;
     cursor: pointer;
 
-    @include tab{
+    @include tab {
       font-size: 20px;
     }
 
@@ -546,8 +546,8 @@
     position: relative;
     z-index: -1;
 
-    @include tab{
-    margin: 0;
+    @include tab {
+      margin: 0;
     }
   }
 
@@ -591,6 +591,132 @@
   &__ {}
 
 
+}
+
+
+/* =================================
+採用情報
+ ================================= */
+
+.page-recruit {
+
+  &__main-visual {
+    position: relative;
+    height: 100vh;
+    background-image: url("../img/subpage/recruit-mv.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden; // チラ見え防止
+  }
+
+  &__main-visual-img01 {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    width: 90%;
+    max-width: 760px;
+    z-index: 2;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: center center;
+    opacity: 0;
+    visibility: hidden;
+    animation: popIn 1s ease-out forwards;
+    animation-delay: 1s;
+
+    @include pc{
+      max-width: 600px;
+    }
+
+    @include tab {
+      top: 46%;
+    }
+
+    @include sp{
+    top: 100px;
+    max-width: 300px;
+
+    }
+  }
+
+  @keyframes popIn {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    50% {
+      visibility: visible;
+    }
+
+    80% {
+      transform: translate(-50%, -50%) scale(1.1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      visibility: visible;
+      /* ←ここを必ず追加 */
+    }
+  }
+
+  &__main-visual-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 720px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include pc{
+      max-width: 600px;
+    }
+
+    @include tab {
+flex-wrap: wrap;
+max-width: 300px;
+
+    }
+
+    @include sp{
+      top: 70%;
+    }
+  }
+
+
+  &__main-visual-item {
+
+    @include tab{
+    width: calc((100% - 40px) / 2);
+    }
+  }
+
+  &__main-visual-ttl {
+
+    @include tab{
+    order: -1;
+    width: 100%;
+    }
+  }
+
+  &__ {}
+
+
+  &__section {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 80px 16px;
+
+    @include tab {
+      padding: 40px 16px 60px;
+    }
+  }
 }
 
 /* =================================

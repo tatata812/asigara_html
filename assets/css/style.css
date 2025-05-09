@@ -836,6 +836,117 @@ td {
   }
 }
 /* =================================
+採用情報
+ ================================= */
+.page-recruit__main-visual {
+  position: relative;
+  height: 100vh;
+  background-image: url("../img/subpage/recruit-mv.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.page-recruit__main-visual-img01 {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  width: 90%;
+  max-width: 760px;
+  z-index: 2;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center center;
+  opacity: 0;
+  visibility: hidden;
+  animation: popIn 1s ease-out forwards;
+  animation-delay: 1s;
+}
+@media (max-width: 1120px) {
+  .page-recruit__main-visual-img01 {
+    max-width: 600px;
+  }
+}
+@media (max-width: 820px) {
+  .page-recruit__main-visual-img01 {
+    top: 46%;
+  }
+}
+@media (max-width: 600px) {
+  .page-recruit__main-visual-img01 {
+    top: 100px;
+    max-width: 300px;
+  }
+}
+@keyframes popIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+  50% {
+    visibility: visible;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+    /* ←ここを必ず追加 */
+  }
+}
+.page-recruit__main-visual-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 1120px) {
+  .page-recruit__main-visual-text {
+    max-width: 600px;
+  }
+}
+@media (max-width: 820px) {
+  .page-recruit__main-visual-text {
+    flex-wrap: wrap;
+    max-width: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .page-recruit__main-visual-text {
+    top: 70%;
+  }
+}
+@media (max-width: 820px) {
+  .page-recruit__main-visual-item {
+    width: calc((100% - 40px) / 2);
+  }
+}
+@media (max-width: 820px) {
+  .page-recruit__main-visual-ttl {
+    order: -1;
+    width: 100%;
+  }
+}
+.page-recruit__section {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 80px 16px;
+}
+@media (max-width: 820px) {
+  .page-recruit__section {
+    padding: 40px 16px 60px;
+  }
+}
+
+/* =================================
 
  ================================= */
 /* =================================
