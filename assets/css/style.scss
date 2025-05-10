@@ -43,6 +43,11 @@ header
         color: #fff;
       }
     }
+
+    &.scrolled {
+      background-color: rgba(233, 233, 233, 0.7);
+      /* 半透明グレー */
+    }
   }
 
 
@@ -167,6 +172,36 @@ header
       border: #1C1C1C 1px solid;
       z-index: 999;
       position: relative;
+    }
+  }
+
+  &__breadcrumb-wrap {
+    height: 29px;
+    position: fixed;
+    top: 78px;
+    width: 100%;
+    line-height: 32px;
+    font-size: 13px;
+    color: rgb(92, 92, 92);
+    opacity: 0;
+    transition: all 0.3s;
+
+
+    &.active {
+      opacity: 1;
+    }
+
+    @include tab {
+      top: 59px;
+    }
+  }
+
+  &__breadcrumb {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 12px;
+    @include tab{
+      padding: 0 8px 0 28px;
     }
   }
 }
@@ -563,7 +598,7 @@ footer
     position: absolute;
     font-size: 13px;
     cursor: pointer;
-    top: -22px;
+    top: -24px;
     right: 40px;
     z-index: 2;
 

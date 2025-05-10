@@ -160,105 +160,6 @@ td {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.ttl-style {
-  text-align: center;
-  font-size: 36px;
-  margin: 0 0 80px;
-  font-size: clamp(1.375rem, 1.057rem + 1.59vw, 2.25rem);
-
-  @include tab {
-    margin: 0 0 32px;
-  }
-
-  span {
-    display: block;
-    font-size: 20px;
-
-    @include tab {
-      font-size: 16px;
-
-    }
-  }
-
-  &--white {
-    color: #fff;
-  }
-}
-
-.section-style {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 12px;
-}
-
-
-// 下層ページ共通
-
-.subpage {
-  &__main-visual {
-
-    margin: 0 0 120px;
-
-    @include tab {
-      margin: 0 0 40px;
-    }
-  }
-
-  &__section {
-    padding: 0 12px 140px;
-
-    @include tab {
-      padding: 0 12px 80px;
-    }
-
-  }
-
-  &__box {
-    max-width: 880px;
-    margin: 0 auto;
-  }
-
-  &__lead-wrap {
-    padding: 0 12px;
-  }
-
-  &__lead {
-    text-align: center;
-
-    @include tab {
-      margin: 0 auto 24px;
-      max-width: 360px;
-      text-align: left;
-    }
-
-    &--margin {
-      margin: 0 auto 24px;
-    }
-  }
-}
-
 .black-bg {
   visibility: hidden;
   position: fixed;
@@ -278,188 +179,102 @@ td {
   }
 }
 
-// Followメニュー
+// エディタースタイル
+.content-style {
+  line-height: 32px;
 
-.follow-btn {
-  position: fixed;
-  bottom: 160px;
-  right: 0;
-  opacity: 0;
-  transform: translate(80px, 0);
-  transition: all 0.5s;
+  &__block {
+    margin: 0 0 60px;
 
-  @include tab {
-    bottom: 60px;
-  }
-
-  &.active {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-
-  &__item {
-    width: 80px;
-    display: block;
-
-    @include tab {
-      width: 60px;
-
-
+    @include sp {
+      margin: 0 0 40px;
     }
   }
-}
 
-//スクロースしたら表示
-
-.fadein-anime {
-  opacity: 0;
-  transform: translate(0, 30px);
-  transition: all 1s;
-
-  &.active {
-    opacity: 1;
-    transform: translate(0, 0);
+  .aligncenter {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .alignright {
+    float: right;
+  }
+  
+  .alignleft {
+    float: left;
   }
 
-  // @include tab {
-  //   opacity: 1;
-  //   transform: translate(0, 0);
-  // }
-}
-
-.fadein-anime02 {
-  opacity: 0;
-  transition: all 1s;
-
-  &.active {
-    opacity: 1;
+  img {
+    width: auto;
   }
 
-  // @include tab {
-  //   opacity: 1;
-  // }
-}
-
-.fadein-anime03 {
-  opacity: 0;
-  transition: opacity 1s;
-  transition-delay: 1.2s;
-
-  &.active {
-    opacity: 1;
+  p {
+    margin: 0 0 12px;
+    line-height: 22px;
   }
 
-  @include tab {
-    opacity: 1;
-  }
-}
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 40px;
 
-.fadein-anime04 {
-  opacity: 0;
-  transition: opacity 1s;
-  transition-delay: 1.4s;
 
-  &.active {
-    opacity: 1;
-  }
+    @include pc {
+      font-size: 22px;
+    }
 
-  @include tab {
-    opacity: 1;
-  }
-}
-
-// トップアニメーション
-.topAnimation,
-.topAnimation03 {
-  animation-name: topAnimation;
-  animation-fill-mode: backwards;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-delay: 0.2s;
-  animation-direction: normal;
-}
-
-@keyframes topAnimation {
-  0% {
-    opacity: 0;
+    @include tab {
+      font-size: 20px;
+    }
   }
 
-  100% {
-    opacity: 1;
-  }
-}
+  h2 {
+    font-size: 20px;
+    padding: 0 0 12px;
+    margin: 0 0 24px;
+    color: #3071b9;
+    font-weight: bold;
 
-// トップアニメーション
-.topAnimation02 {
-  animation-name: topAnimation;
-  animation-fill-mode: backwards;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-delay: 1.5s;
-  animation-direction: normal;
-}
+    @include sp {
+      font-size: 18px;
+      margin: 0 0 16px;
 
-@keyframes topAnimation {
-  0% {
-    opacity: 0;
+    }
+
   }
 
-  100% {
-    opacity: 1;
-  }
-}
+  h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 0 16px;
 
-// トップアニメーション　ふきだし
-.step01 {
-  animation: step01 5s ease-in-out infinite;
-}
+    @include sp {
+      margin: 0 0 16px;
 
-@keyframes step01 {
-  0% {
-    transform: translate(0, 0);
+    }
+
   }
 
-  25% {
-    transform: translate(-6px, -12px) rotate(-2deg);
+  a {
+    text-decoration: underline;
   }
 
-  50% {
-    transform: translate(0, 0);
+  ol {
+    margin: 0 0 24px 24px;
+
+    li {
+      list-style: decimal;
+      line-height: 22px;
+    }
   }
 
-  75% {
-    transform: translate(6px, -12px) rotate(2deg);
+  ul {
+    margin: 0 0 24px 24px;
+
+    li {
+      list-style: disc;
+      line-height: 22px;
+    }
   }
 
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.step02 {
-  animation: step02 5s ease-in-out infinite;
-}
-
-@keyframes step02 {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  25% {
-    transform: translate(6px, 2px) rotate(2deg);
-  }
-
-  50% {
-    transform: translate(0, 0);
-  }
-
-  75% {
-    transform: translate(-6px, 12px) rotate(-2deg);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
 }

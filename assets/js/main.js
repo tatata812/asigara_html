@@ -152,4 +152,18 @@ $(function () {
       $(this).closest('.popup-container').fadeOut();
     });
 
+
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > 30) {
+        $(".header").addClass("active");
+      } else {
+        $(".header").removeClass("active");
+      };
+      if ($(window).scrollTop() > 30) {
+        $(".header__breadcrumb-wrap").addClass("active");
+      } else {
+        $(".header__breadcrumb-wrap").removeClass("active");
+      }
+    });
+
 })

@@ -133,73 +133,6 @@ td {
   transform: translateY(0);
 }
 
-.ttl-style {
-  text-align: center;
-  font-size: 36px;
-  margin: 0 0 80px;
-  font-size: clamp(1.375rem, 1.057rem + 1.59vw, 2.25rem);
-}
-@media (max-width: 820px) {
-  .ttl-style {
-    margin: 0 0 32px;
-  }
-}
-.ttl-style span {
-  display: block;
-  font-size: 20px;
-}
-@media (max-width: 820px) {
-  .ttl-style span {
-    font-size: 16px;
-  }
-}
-.ttl-style--white {
-  color: #fff;
-}
-
-.section-style {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 12px;
-}
-
-.subpage__main-visual {
-  margin: 0 0 120px;
-}
-@media (max-width: 820px) {
-  .subpage__main-visual {
-    margin: 0 0 40px;
-  }
-}
-.subpage__section {
-  padding: 0 12px 140px;
-}
-@media (max-width: 820px) {
-  .subpage__section {
-    padding: 0 12px 80px;
-  }
-}
-.subpage__box {
-  max-width: 880px;
-  margin: 0 auto;
-}
-.subpage__lead-wrap {
-  padding: 0 12px;
-}
-.subpage__lead {
-  text-align: center;
-}
-@media (max-width: 820px) {
-  .subpage__lead {
-    margin: 0 auto 24px;
-    max-width: 360px;
-    text-align: left;
-  }
-}
-.subpage__lead--margin {
-  margin: 0 auto 24px;
-}
-
 .black-bg {
   visibility: hidden;
   position: fixed;
@@ -218,158 +151,90 @@ td {
   opacity: 0.6;
 }
 
-.follow-btn {
-  position: fixed;
-  bottom: 160px;
-  right: 0;
-  opacity: 0;
-  transform: translate(80px, 0);
-  transition: all 0.5s;
+.content-style {
+  line-height: 32px;
 }
-@media (max-width: 820px) {
-  .follow-btn {
-    bottom: 60px;
+.content-style__block {
+  margin: 0 0 60px;
+}
+@media (max-width: 600px) {
+  .content-style__block {
+    margin: 0 0 40px;
   }
 }
-.follow-btn.active {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-.follow-btn__item {
-  width: 80px;
+.content-style .aligncenter {
   display: block;
+  margin: 0 auto;
+}
+.content-style .alignright {
+  float: right;
+}
+.content-style .alignleft {
+  float: left;
+}
+.content-style img {
+  width: auto;
+}
+.content-style p {
+  margin: 0 0 12px;
+  line-height: 22px;
+}
+.content-style h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 40px;
+}
+@media (max-width: 1120px) {
+  .content-style h1 {
+    font-size: 22px;
+  }
 }
 @media (max-width: 820px) {
-  .follow-btn__item {
-    width: 60px;
+  .content-style h1 {
+    font-size: 20px;
   }
+}
+.content-style h2 {
+  font-size: 20px;
+  padding: 0 0 12px;
+  margin: 0 0 24px;
+  color: #3071b9;
+  font-weight: bold;
+}
+@media (max-width: 600px) {
+  .content-style h2 {
+    font-size: 18px;
+    margin: 0 0 16px;
+  }
+}
+.content-style h3 {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 16px;
+}
+@media (max-width: 600px) {
+  .content-style h3 {
+    margin: 0 0 16px;
+  }
+}
+.content-style a {
+  text-decoration: underline;
+}
+.content-style ol {
+  margin: 0 0 24px 24px;
+}
+.content-style ol li {
+  list-style: decimal;
+  line-height: 22px;
+}
+.content-style ul {
+  margin: 0 0 24px 24px;
+}
+.content-style ul li {
+  list-style: disc;
+  line-height: 22px;
 }
 
-.fadein-anime {
-  opacity: 0;
-  transform: translate(0, 30px);
-  transition: all 1s;
-}
-.fadein-anime.active {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.fadein-anime02 {
-  opacity: 0;
-  transition: all 1s;
-}
-.fadein-anime02.active {
-  opacity: 1;
-}
-
-.fadein-anime03 {
-  opacity: 0;
-  transition: opacity 1s;
-  transition-delay: 1.2s;
-}
-.fadein-anime03.active {
-  opacity: 1;
-}
-@media (max-width: 820px) {
-  .fadein-anime03 {
-    opacity: 1;
-  }
-}
-
-.fadein-anime04 {
-  opacity: 0;
-  transition: opacity 1s;
-  transition-delay: 1.4s;
-}
-.fadein-anime04.active {
-  opacity: 1;
-}
-@media (max-width: 820px) {
-  .fadein-anime04 {
-    opacity: 1;
-  }
-}
-
-.topAnimation,
-.topAnimation03 {
-  animation-name: topAnimation;
-  animation-fill-mode: backwards;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-delay: 0.2s;
-  animation-direction: normal;
-}
-
-@keyframes topAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.topAnimation02 {
-  animation-name: topAnimation;
-  animation-fill-mode: backwards;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-delay: 1.5s;
-  animation-direction: normal;
-}
-
-@keyframes topAnimation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.step01 {
-  animation: step01 5s ease-in-out infinite;
-}
-
-@keyframes step01 {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(-6px, -12px) rotate(-2deg);
-  }
-  50% {
-    transform: translate(0, 0);
-  }
-  75% {
-    transform: translate(6px, -12px) rotate(2deg);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-.step02 {
-  animation: step02 5s ease-in-out infinite;
-}
-
-@keyframes step02 {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(6px, 2px) rotate(2deg);
-  }
-  50% {
-    transform: translate(0, 0);
-  }
-  75% {
-    transform: translate(-6px, 12px) rotate(-2deg);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
 /* =================================
 会社概要
  ================================= */
@@ -1250,7 +1115,14 @@ td {
 }
 .subpage__right-column {
   flex: 1;
-  padding: 40px 16px 80px;
+  padding: 40px 40px 80px;
+  max-width: 1200px;
+  min-height: 600px;
+}
+@media (max-width: 820px) {
+  .subpage__right-column {
+    padding: 40px 16px 80px;
+  }
 }
 .subpage__right-column--contact {
   padding: 40px 0 80px;
@@ -1270,8 +1142,66 @@ td {
   color: #008cff;
   font-weight: bold;
 }
+.subpage__text {
+  margin: 0 0 24px;
+}
 .subpage__text--contact {
   padding: 0 40px;
+  margin: 0;
+}
+.subpage__sub-ttl {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+.subpage__privacy-bottom {
+  margin: 60px 0 0;
+}
+.subpage__sitemap-list a {
+  text-decoration: underline;
+}
+.subpage__sitemap-list li {
+  padding: 8px 15px;
+  position: relative;
+  border-bottom: #7ddcff 1px solid;
+}
+.subpage__sitemap-list-right {
+  padding: 8px 0 8px 40px !important;
+  font-size: 14px;
+  color: #9e9e9e;
+}
+.subpage__sitemap-list-right a {
+  font-size: 14px;
+  color: #9e9e9e;
+}
+.subpage__map-wrap {
+  max-width: 100%;
+  margin: 0 auto 40px;
+}
+.subpage__map {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+.subpage__map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.subpage__map-bottom {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.subpage__map-item span {
+  font-weight: bold;
+}
+.subpage__pager {
+  text-align: center;
+  margin: 40px 0 0;
 }
 /* =================================
 お問い合わせフォーム
@@ -1405,6 +1335,48 @@ td {
   }
 }
 /* =================================
+記事ページ
+ ================================= */
+.single {
+  padding: 160px 12px;
+}
+@media (max-width: 820px) {
+  .single {
+    padding: 80px 12px 72px;
+  }
+}
+.single__ttl-wrap {
+  max-width: 1120px;
+  margin: 0 auto 60px;
+}
+@media (max-width: 820px) {
+  .single__ttl-wrap {
+    margin: 0 auto 40px;
+  }
+}
+.single__info-right-top {
+  font-size: 12px;
+}
+.single__ttl {
+  font-size: 24px;
+  color: #3071b9;
+  font-weight: bold;
+}
+.single__section {
+  max-width: 1040px;
+  margin: 0 auto 60px;
+}
+@media (max-width: 820px) {
+  .single__section {
+    margin: 0 auto 40px;
+  }
+}
+.single__pager {
+  margin: 40px 0 0;
+  text-align: center;
+}
+
+/* =================================
 header
  ================================= */
 .header {
@@ -1422,6 +1394,10 @@ header
 .header.black .header__menu--contact, .header.black .header__ttl-span--contact {
   background-color: #00a2ff;
   color: #fff;
+}
+.header.black.scrolled {
+  background-color: rgba(233, 233, 233, 0.7);
+  /* 半透明グレー */
 }
 @media (max-width: 820px) {
   .header {
@@ -1516,6 +1492,35 @@ header
     border: #1C1C1C 1px solid;
     z-index: 999;
     position: relative;
+  }
+}
+.header__breadcrumb-wrap {
+  height: 29px;
+  position: fixed;
+  top: 78px;
+  width: 100%;
+  line-height: 32px;
+  font-size: 13px;
+  color: rgb(92, 92, 92);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.header__breadcrumb-wrap.active {
+  opacity: 1;
+}
+@media (max-width: 820px) {
+  .header__breadcrumb-wrap {
+    top: 59px;
+  }
+}
+.header__breadcrumb {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+@media (max-width: 820px) {
+  .header__breadcrumb {
+    padding: 0 8px 0 28px;
   }
 }
 
@@ -1841,7 +1846,7 @@ footer
   position: absolute;
   font-size: 13px;
   cursor: pointer;
-  top: -22px;
+  top: -24px;
   right: 40px;
   z-index: 2;
 }
