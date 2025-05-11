@@ -1177,6 +1177,7 @@
     border-bottom: 1px solid #cccccc;
     border-collapse: collapse;
     padding: 12px 12px;
+    vertical-align: middle;
 
     @include tab {
       padding: 8px 4px 24px 4px;

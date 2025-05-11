@@ -1263,6 +1263,7 @@ td {
   border-bottom: 1px solid #cccccc;
   border-collapse: collapse;
   padding: 12px 12px;
+  vertical-align: middle;
 }
 @media (max-width: 820px) {
   .form-wrap__td {
