@@ -32,7 +32,6 @@ header
   height: 80px;
   transition: background-color 0.3s ease;
 
-
   &.black {
     
     .header__menu,.header__ttl-span {
@@ -51,27 +50,14 @@ header
   }
 
 
-
-
   @include tab {
     height: 62px;
   }
-
-  // &.is-hide {
-  //   transform: translateY(-100%);
-  // }
-
-  // &.active {
-  //   display: none;
-  // }
 
   &.scrolled {
     background-color: rgba(60, 60, 60, 0.7);
     /* 半透明グレー */
   }
-
-  
-
 
 
   &__inner {
@@ -88,7 +74,6 @@ header
       justify-content: space-between;
       padding: 4px 16px;
       height: 62px;
-
     }
   }
 
@@ -104,7 +89,6 @@ header
       flex-direction: column;
       max-width: 240px;
       align-items: center;
-
     }
 
     @include tab {
@@ -120,11 +104,7 @@ header
     @include tab {
       font-size: 13px;
     }
-
-    
   }
-
-  &__ttl-logo {}
 
   &__menu-wrap {
 
@@ -139,12 +119,7 @@ header
 
     @include pc {
       gap: 18px;
-
     }
-
-
-
-
   }
 
   &__menu {
@@ -185,7 +160,6 @@ header
     color: rgb(92, 92, 92);
     opacity: 0;
     transition: all 0.3s;
-
 
     &.active {
       opacity: 1;
@@ -437,13 +411,7 @@ header
   &__text02 {
     z-index: 1;
     animation: fadeInImg 3s 3s forwards; // 3秒後に1秒かけてフェードイン
-
   }
-
-  &__ {}
-
-  &__ {}
-
 }
 
 /* =================================
@@ -516,26 +484,6 @@ header
   &__btn-wrap {
     margin: 40px 0 0;
   }
-
-  &__btn {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 

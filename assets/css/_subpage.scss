@@ -39,12 +39,10 @@
     width: 90%;
     max-width: 680px;
     z-index: 2;
-
     transform: translate(-50%, -50%) scale(0);
     transform-origin: center center;
     opacity: 0;
     visibility: hidden;
-
     animation: popIn 1s ease-out forwards;
     animation-delay: 1s;
 
@@ -87,10 +85,7 @@
       max-width: 260px;
       left: 16px;
       bottom: 70px;
-
-
     }
-
   }
 
   &__section {
@@ -137,7 +132,6 @@
       width: 100%;
       max-width: 500px;
     }
-
   }
 
   &__section-ttl {
@@ -168,7 +162,6 @@
         width: 100px;
       }
     }
-
   }
 
   &__bnr-ttl {
@@ -194,7 +187,6 @@
       @include pc {
         width: calc(100% + 50px);
       }
-
     }
   }
 
@@ -213,18 +205,11 @@
     display: block;
     width: 80px;
   }
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 /* =================================
 ポップアップ
  ================================= */
-
 
 .popup-style {
   display: none;
@@ -243,15 +228,12 @@
   /* 垂直方向中央揃え */
   overflow: auto;
 
-
-
   &__content {
 
     @include tab {
       overflow: auto;
       /* ポップアップの内容がmax-heightを超えた場合にスクロールバーを表示 */
     }
-
   }
 
   &__ttl {
@@ -264,9 +246,7 @@
 
     &--pink {
       background-color: #f099bf;
-
     }
-
   }
 
   &__btn {
@@ -294,7 +274,6 @@
     font-size: 24px;
     color: #0097e0;
     padding: 12px;
-
   }
 
   &__table {
@@ -302,7 +281,6 @@
     border-collapse: collapse;
     margin-bottom: 15px;
     margin: 0 auto 40px;
-
 
     th,
     td {
@@ -326,8 +304,6 @@
       }
     }
   }
-
-
 }
 
 
@@ -339,9 +315,6 @@
   max-height: 770px;
   width: 100%;
   background-color: #cff2ff;
-
-
-
 
   &__img {
     max-width: 680px;
@@ -355,8 +328,6 @@
     max-width: 680px;
     margin: 0 auto 24px;
   }
-
-
 }
 
 
@@ -370,16 +341,9 @@
     height: 100%;
   }
 
-
-
-
-
   &--pink {
     background-color: #fac9d6;
   }
-
-
-
 
   &__lead {
     font-size: 24px;
@@ -391,7 +355,6 @@
     @include tab {
       padding: 0 16px;
     }
-
   }
 
   &__flex {
@@ -404,7 +367,6 @@
       flex-direction: column;
       padding: 0 16px;
     }
-
   }
 
   &__left {
@@ -421,7 +383,6 @@
     @include tab {
       width: 100%;
     }
-
   }
 
   &__sub-ttl {
@@ -454,7 +415,6 @@
     @include tab {
       padding: 0 16px;
       font-size: 24px;
-
     }
   }
 
@@ -543,8 +503,6 @@
         width: 250px;
       }
     }
-
-
   }
 
   &__faq-answer {
@@ -558,16 +516,7 @@
       left: -18px;
       transform: scale(0.5);
     }
-
-
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
 }
 
 
@@ -615,7 +564,6 @@
       width: 300px;
       top: 30%;
       left: 50%;
-
     }
   }
 
@@ -642,7 +590,6 @@
       align-items: center;
       gap: 4px;
       margin: 0 auto 60px;
-
     }
   }
 
@@ -680,7 +627,6 @@
 
       @include tab {
         font-size: 20px;
-
       }
     }
   }
@@ -760,20 +706,6 @@
 
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 
@@ -910,7 +842,6 @@
     @include tab {
       flex-direction: column;
       margin: 0 0 24px;
-
     }
   }
 
@@ -930,7 +861,6 @@
 
     &--reverse {
       flex-direction: row-reverse;
-
     }
 
     @include tab {
@@ -946,8 +876,6 @@
       width: 100%;
     }
   }
-
-  &__text {}
 
   &__lead {
     background-color: #0097e0;
@@ -972,7 +900,6 @@
         font-size: 20px;
       }
     }
-
   }
 
   &__content-right {
@@ -998,7 +925,6 @@
       margin: 0 0 0 8px;
       cursor: pointer;
       vertical-align: middle;
-
     }
   }
 
@@ -1072,7 +998,6 @@
     @include tab {
       width: 100%;
       padding: 24px 0;
-
     }
   }
 
@@ -1092,7 +1017,6 @@
       @include tab {
         padding: 40px 16px 80px;
       }
-
     }
   }
 
@@ -1116,7 +1040,6 @@
     &--contact {
       padding: 0 40px;
       margin: 0;
-
     }
   }
 
@@ -1193,12 +1116,6 @@
     text-align: center;
     margin: 40px 0 0;
   }
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 /* =================================
@@ -1341,30 +1258,6 @@
       width: 240px;
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 /* =================================
@@ -1404,7 +1297,6 @@
 
     @include tab {
       margin: 0 auto 40px;
-
     }
   }
 
