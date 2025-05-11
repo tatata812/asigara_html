@@ -1040,6 +1040,10 @@
     &--contact {
       padding: 0 40px;
       margin: 0;
+
+      @include tab{
+        padding: 0;
+      }
     }
   }
 
@@ -1051,6 +1055,14 @@
 
   &__privacy-bottom {
     margin: 60px 0 0;
+
+    a {
+
+      @include tab{
+      
+        font-size: 16px;
+      }
+    }
   }
 
   &__sitemap-list {
@@ -1106,9 +1118,16 @@
   }
 
   &__map-item {
-
     span {
       font-weight: bold;
+    }
+
+    a {
+
+      @include tab{
+      
+        font-size: 16px;
+      }
     }
   }
 

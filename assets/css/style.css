@@ -1152,12 +1152,22 @@ td {
   padding: 0 40px;
   margin: 0;
 }
+@media (max-width: 820px) {
+  .subpage__text--contact {
+    padding: 0;
+  }
+}
 .subpage__sub-ttl {
   font-size: 22px;
   margin: 0 0 10px;
 }
 .subpage__privacy-bottom {
   margin: 60px 0 0;
+}
+@media (max-width: 820px) {
+  .subpage__privacy-bottom a {
+    font-size: 16px;
+  }
 }
 .subpage__sitemap-list a {
   text-decoration: underline;
@@ -1201,6 +1211,11 @@ td {
 }
 .subpage__map-item span {
   font-weight: bold;
+}
+@media (max-width: 820px) {
+  .subpage__map-item a {
+    font-size: 16px;
+  }
 }
 .subpage__pager {
   text-align: center;
